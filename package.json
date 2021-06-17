@@ -1,0 +1,11 @@
+{
+  "name": "snl",
+  "version": "1.0.0",
+  "dependencies": {
+    "graphviz": "^0.0.9",
+    "python-js": "^0.9.8"
+  },
+  "devDependencies": {
+    "digraph": "^1.6.1"
+  }
+}

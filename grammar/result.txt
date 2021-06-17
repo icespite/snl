@@ -1,0 +1,121 @@
+  Program  
+   |  ProgramHead  
+      |  PROGRAM  program
+      |  ProgramName  
+         |  ID  p
+   |  DeclarePart  
+      |  TypeDec  
+         |  TypeDeclaration  
+            |  TYPE  type
+            |  TypeDecList  
+               |  TypeId  
+                  |  ID  t
+               |  =  =
+               |  TypeName  
+                  |  BaseType  
+                     |  INTEGER  integer
+               |  ;  ;
+               |  TypeDecMore  
+                  |  ε  
+                     |  ε  ε
+      |  VarDec  
+         |  VarDeclaration  
+            |  VAR  var
+            |  VarDecList  
+               |  TypeName  
+                  |  ID  t
+               |  VarIdList  
+                  |  ID  v1
+                  |  VarIdMore  
+                     |  ε  
+                        |  ε  ε
+               |  ;  ;
+               |  VarDecMore  
+                  |  VarDecList  
+                     |  TypeName  
+                        |  BaseType  
+                           |  CHAR  char
+                     |  VarIdList  
+                        |  ID  v2
+                        |  VarIdMore  
+                           |  ε  
+                              |  ε  ε
+                     |  ;  ;
+                     |  VarDecMore  
+                        |  ε  
+                           |  ε  ε
+      |  ProcDec  
+         |  ε  
+            |  ε  ε
+   |  ProgramBody  
+      |  BEGIN  begin
+      |  StmList  
+         |  Stm  
+            |  InputStm  
+               |  READ  read
+               |  (  (
+               |  Invar  
+                  |  ID  v1
+               |  )  )
+         |  StmMore  
+            |  ;  ;
+            |  StmList  
+               |  Stm  
+                  |  ID  v1
+                  |  AssCall  
+                     |  AssignmentRest  
+                        |  VariMore  
+                           |  ε  
+                              |  ε  ε
+                        |  :=  :=
+                        |  Exp  
+                           |  Term  
+                              |  Factor  
+                                 |  Variable  
+                                    |  ID  v1
+                                    |  VariMore  
+                                       |  ε  
+                                          |  ε  ε
+                              |  OtherFactor  
+                                 |  ε  
+                                    |  ε  ε
+                           |  OtherTerm  
+                              |  AddOp  
+                                 |  +  +
+                              |  Exp  
+                                 |  Term  
+                                    |  Factor  
+                                       |  INTC  10
+                                    |  OtherFactor  
+                                       |  ε  
+                                          |  ε  ε
+                                 |  OtherTerm  
+                                    |  ε  
+                                       |  ε  ε
+               |  StmMore  
+                  |  ;  ;
+                  |  StmList  
+                     |  Stm  
+                        |  OutputStm  
+                           |  WRITE  write
+                           |  (  (
+                           |  Exp  
+                              |  Term  
+                                 |  Factor  
+                                    |  Variable  
+                                       |  ID  v1
+                                       |  VariMore  
+                                          |  ε  
+                                             |  ε  ε
+                                 |  OtherFactor  
+                                    |  ε  
+                                       |  ε  ε
+                              |  OtherTerm  
+                                 |  ε  
+                                    |  ε  ε
+                           |  )  )
+                     |  StmMore  
+                        |  ε  
+                           |  ε  ε
+      |  END  end
+   |  .  .

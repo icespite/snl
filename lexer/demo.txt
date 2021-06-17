@@ -1,0 +1,17 @@
+program p
+  type t = integer;
+       x = char;
+       w1 = record
+                 integer x;
+                 integer x1;
+            end ;
+       zz = t;
+  var t 1a;
+      char v2;
+      char v3;
+  procedure q(integer num);
+begin
+    read(v1);
+    v1:=v1+10;
+    write(v1)
+end.
