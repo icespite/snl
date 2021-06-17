@@ -3,13 +3,6 @@ const {AstNode} = require("./AST");
 const graphviz = require('graphviz');
 const GRAMMAR = require("./define");
 
-let data;
-try {
-    data = fs.readFileSync('/home/icespite/下载/SNL_Compiler-main/Parser/ll1.txt', 'utf8')
-} catch (err) {
-    console.error(err)
-}
-
 const ll1Table = JSON.parse(data);
 
 function First(left) {
@@ -290,7 +283,7 @@ function main() {
     } catch (err) {
         console.error(err)
     }
-    var result = AST(JSON.parse(tokens),true)
+    var result = AST(JSON.parse(tokens), true)
     convertToPng(result)
     console.log("success~")
 }
